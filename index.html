@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHOCOLATE'S</title>
+    <link rel="stylesheet" href="projec18.css" />
+    <link rel="stylesheet" href="fontawes/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&family=Playwrite+US+Trad+Guides&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="project18.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="chocoVanta.js"></script>
+
+    <link rel="preload" as="image" href="logo navbar/CHOCOLATE'S.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="chochlate-sevent/chocolate-svalentine.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="chochlate-sevent/chocolate-smerrychristmast.webp" fetchpriority="high">
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <img src="logo navbar/CHOCOLATE'S.webp" alt="CHOCOLATE's" loading="eager" fetchpriority="high">
+        <h2>CHOCOLATE'S</h2>
+      </div>
+
+      <div class="nav">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+
+        <div class="search-box">
+          <input id="searchInput" type="text" placeholder="Search..." />
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-ultra">
+      <div class="stardust"></div>
+      <div class="layer ultra-bg"></div>
+      <div class="layer ultra-mid"></div>
+
+      <div class="light-beam"></div>
+      <div class="ultra-fog"></div>
+
+      <canvas id="chocoParticlesHero"></canvas>
+
+      <div class="hero-hyper">
+        <div class="hero-hyper-content">
+          <h2 class="hero-title">SELAMAT DATANG DI CHOCOLATE'S</h2>
+          <h3 class="hero-subtitle">Where Every Bite Tells a Story</h3>
+        </div>
+      </div>
+    </div>
+
+    <section class="history-emosional">
+      <div class="emosional-overlay"></div>
+      <div class="emosional-fog"></div>
+      <div class="malam-overlay"></div>
+      <div class="malam-rain"></div>
+      <div class="malam-glow"></div>
+
+      <div class="emosional-content">
+        <h3 id="emosionalTitle">CERITA TENTANG CHOCOLATE'S</h3>
+        <p id="emosionalText">
+          CHOCOLATE'S lahir dari keyakinan sederhana bahwa coklat bukan hanya
+          rasa manis—tetapi pengalaman yang menghangatkan hati. Terinspirasi
+          dari kenangan masa kecil dan momen-momen penuh kehangatan, setiap
+          coklat dibuat dengan bahan terbaik dan sentuhan artisan yang penuh
+          ketelitian.
+        </p>
+      </div>
+    </section>
+
+    <section class="events-wrapper">
+      <h1 class="events-title">EVENTS</h1>
+
+      <div class="parallax-bg">
+        <div class="parallax-layer layer-back"></div>
+        <div class="parallax-layer layer-mid"></div>
+        <div class="parallax-layer layer-front"></div>
+
+        <canvas id="chocoParticlesEvents"></canvas>
+      </div>
+
+      <div class="event-slider" id="eventSlider">
+        <div
+          class="slide active"
+          data-title="Valentine Special"
+          data-text="Rayakan cinta dengan coklat istimewa."
+        >
+          <img
+            src="chochlate-sevent/chocolate-svalentine.webp"
+            alt="valentine"
+            loading="eager" fetchpriority="high">
+        </div>
+
+        <div
+          class="slide"
+          data-title="Merry Christmas"
+          data-text="Hangatkan hari natal dengan coklat premium."
+        >
+          <img
+            src="chochlate-sevent/chocolate-smerrychristmast.webp"
+            alt="merry christmast"
+            loading="eager" fetchpriority="high">
+        </div>
+
+        <div
+          class="slide"
+          data-title="Happy Halloween"
+          data-text="Coklat spooky spesial malam halloween."
+        >
+          <img
+            src="chochlate-sevent/chocolateshappyhallowens.webp"
+            alt="happy hallowen"
+            loading="lazy">
+        </div>
+
+        <div
+          class="slide"
+          data-title="Gift Box Edition"
+          data-text="Hadiah manis dengan paket coklat elegan."
+        >
+          <img src="chochlate-sevent/chocolate-sgiftbox.webp" alt="gift box" loading="lazy">
+        </div>
+
+        <div
+          class="slide"
+          data-title="Halloween Gift"
+          data-text="Paket halloween eksklusif dengan desain unik."
+        >
+          <img
+            src="chochlate-sevent/chocholateshallowengift.webp"
+            alt="gix box happy hallowen"
+            loading="lazy">
+        </div>
+      </div>
+
+      <div class="event-caption">
+        <h2 id="captionTitle"></h2>
+        <p id="captionText"></p>
+      </div>
+
+      <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <div class="wrap">
+      <h1>PRODUCT</h1>
+      <p class="lead">
+        Berikan Kenikmatan Di setiap Produk kami.
+      </p>
+
+      <div class="grid" id="grid">
+        <div
+          class="menu-card"
+          data-name="Chocolate Macaron"
+          data-price="28000"
+          data-img="choclate'sproduct/chocholates's macaron.webp"
+        >
+          <div class="card-inner">
+            <div class="layer">
+              <img
+                src="choclate'sproduct/chocholates's macaron.webp"
+                alt="Chocolate Macaron"
+                loading="lazy">
+            </div>
+            <div class="title">MACARON</div>
+            <div class="float-desc">
+              Macaron lembut dengan filling coklat premium.
+            </div>
+            <div class="card-hover-info">
+              <div class="price">Rp 28.000</div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-name="Chocolate Coins"
+          data-price="15000"
+          data-img="choclate'sproduct/chocholate'scoins.webp"
+        >
+          <div class="card-inner">
+            <div class="layer">
+              <img
+                src="choclate'sproduct/chocholate'scoins.webp"
+                alt="Chocolate Coins"
+                loading="lazy">
+            </div>
+            <div class="title">COINS</div>
+            <div class="float-desc">
+              Kepingan coklat manis khas CHOCOLATE’S.
+            </div>
+            <div class="card-hover-info">
+              <div class="price">Rp 15.000</div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-name="Chocolate Cake"
+          data-price="85000"
+          data-img="choclate'sproduct/chocholate'scake.webp"
+        >
+          <div class="card-inner">
+            <div class="layer">
+              <img
+                src="choclate'sproduct/chocholate'scake.webp"
+                alt="Chocolate Cake"
+                loading="lazy">
+            </div>
+            <div class="title">CAKE</div>
+            <div class="float-desc">
+              Cake coklat lembut & moist, kualitas premium.
+            </div>
+            <div class="card-hover-info">
+              <div class="price">Rp 85.000</div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-name="Chocolate Donut"
+          data-price="22000"
+          data-img="choclate'sproduct/chocolate'sdonut.webp"
+        >
+          <div class="card-inner">
+            <div class="layer">
+              <img
+                src="choclate'sproduct/chocolate'sdonut.webp"
+                alt="Chocolate Donut"
+                loading="lazy">
+            </div>
+            <div class="title">DONUT</div>
+            <div class="float-desc">Donat coklat glaze tebal & lembut.</div>
+            <div class="card-hover-info">
+              <div class="price">Rp 22.000</div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-name="Chocolate Cookies"
+          data-price="30000"
+          data-img="choclate'sproduct/chocolate'scookies.webp"
+        >
+          <div class="card-inner">
+            <div class="layer">
+              <img
+                src="choclate'sproduct/chocolate'scookies.webp"
+                alt="Chocolate Cookies"
+                loading="lazy">
+            </div>
+            <div class="title">COOKIES</div>
+            <div class="float-desc">
+              Cookies renyah dengan chocolate chunks melimpah.
+            </div>
+            <div class="card-hover-info">
+              <div class="price">Rp 30.000</div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-name="Chocolate Pudding"
+          data-price="18000"
+          data-img="choclate'sproduct/chocolate'spudding.webp"
+        >
+          <div class="card-inner">
+            <div class="layer">
+              <img
+                src="choclate'sproduct/chocolate'spudding.webp"
+                alt="Chocolate Pudding"
+                loading="lazy">
+            </div>
+            <div class="title">PUDDING</div>
+            <div class="float-desc">Puding coklat creamy dan milky.</div>
+            <div class="card-hover-info">
+              <div class="price">Rp 18.000</div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-name="Chocolate Truffle"
+          data-price="32000"
+          data-img="choclate'sproduct/chocolate'strufle.webp"
+        >
+          <div class="card-inner">
+            <div class="layer">
+              <img
+                src="choclate'sproduct/chocolate'strufle.webp"
+                alt="Chocolate Truffle"
+                loading="lazy">
+            </div>
+            <div class="title">TRUFFLE</div>
+            <div class="float-desc">
+              Truffle coklat meleleh dengan aroma cocoa premium.
+            </div>
+            <div class="card-hover-info">
+              <div class="price">Rp 32.000</div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-name="Chocolate Mochi"
+          data-price="25000"
+          data-img="choclate'sproduct/chocolatesmochi.webp"
+        >
+          <div class="card-inner">
+            <div class="layer">
+              <img
+                src="choclate'sproduct/chocolatesmochi.webp"
+                alt="Chocolate Mochi"
+                loading="lazy">
+            </div>
+            <div class="title">MOCHI</div>
+            <div class="float-desc">
+              Mochi coklat lembut dengan filling melted truffle.
+            </div>
+            <div class="card-hover-info">
+              <div class="price">Rp 25.000</div>
+              <button class="add-btn">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="cart" id="cartPanel">
+      <h3>Keranjang</h3>
+
+      <div class="cart-list" id="cartList"></div>
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+
+      <button class="checkout" id="checkoutBtn">Checkout</button>
+    </aside>
+
+    <div class="cart-notif" id="cartNotif">Ditambahkan ke keranjang</div>
+
+    <section class="choco-grid">
+      <h1 class="grid-title">Proses Pembuatan Coklat</h1>
+
+      <div class="grid-container">
+        <div class="grid-item">
+          <img src="chochlates proces/proses1.webp" alt="Roasting Presisi" loading="lazy">
+          <h3>DI PETIK DARI PETANI KOKOA</h3>
+          <p>Kami Memilih Buah KOKOA yang bekualitas Dari petani nya langsung.</p>
+        </div>
+
+        <div class="grid-item">
+          <img src="chochlates proces/proses2.webp" alt="Grinding Ultra-Halus" loading="lazy">
+          <h3>Pengeringan Buah KOKOA</h3>
+          <p>Refining 48 jam menghasilkan tekstur creamy.</p>
+        </div>
+
+        <div class="grid-item">
+          <img src="chochlates proces/proses3.webp" alt="Tempering Artisan" loading="lazy">
+          <h3>Di Jaga Oleh Profesional Biar Rasa Tidak akan berubah </h3>
+          <p>Profesional Kuliaty & Kuantitatif.</p>
+        </div>
+
+        <div class="grid-item">
+          <img src="chochlates proces/proses4.webp" alt="Pencetakan Premium" loading="lazy">
+          <h3>Pencetakan Premium</h3>
+          <p>Cetakan akurat & pemeriksaan manual.</p>
+        </div>
+
+        <div class="grid-item">
+          <img src="chochlates proces/proses5.webp" alt="Packaging Elegan" loading="lazy">
+          <h3>Pencetakan Premium Dan Sesuai Dengan Regulasi</h3>
+          <p>Menjaga Kepuasan  Konsumen Itu komimen Kami.</p>
+        </div>
+
+        <div class="grid-item">
+          <img src="chochlates proces/chocolatesproces6.avif" alt="Packaging Elegan" loading="lazy">
+          <h3>CHOCOLATE'S siap di Edarkan Ke konsumen</h3>
+          <p>Dengan Ini Kami yakin Dengan Kepuasan Pelanggan yang Di utamakan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <h2 class="section-title">Lokasi Rekomendasi</h2>
+
+      <div class="location-grid">
+        <div class="location-card js-location-card">
+          <img src="chcohlates-location/chcocolates-jakarta.webp" alt="Lokasi 1" loading="lazy">
+          <div class="location-info">
+            <h3>Lokasi A</h3>
+            <div class="rating">⭐⭐⭐⭐☆ <span>(4.0)</span></div>
+          </div>
+        </div>
+
+        <div class="location-card js-location-card">
+          <img src="lokasi2.webp" alt="Lokasi 2" loading="lazy">
+          <div class="location-info">
+            <h3>Lokasi B</h3>
+            <div class="rating">⭐⭐⭐⭐⭐ <span>(5.0)</span></div>
+          </div>
+        </div>
+
+        <div class="location-card js-location-card">
+          <img src="lokasi3.webp" alt="Lokasi 3" loading="lazy">
+          <div class="location-info">
+            <h3>Lokasi C</h3>
+            <div class="rating">⭐⭐⭐⭐☆ <span>(4.5)</span></div>
+          </div>
+        </div>
+
+        <div class="location-card js-location-card">
+          <img src="lokasi4.webp" alt="Lokasi 4" loading="lazy">
+          <div class="location-info">
+            <h3>Lokasi D</h3>
+            <div class="rating">⭐⭐⭐☆☆ <span>(3.0)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
